@@ -6,20 +6,20 @@ const PRICEURL = `https://ohlcv-api.nomadcoders.workers.dev/?coinId=`;
 export const fetchCoins = async() =>{
   // 데이터 얻는법
   // axios.get(url).then(res => console.log(res.data))
-  const response = await axios.get(`${BASE_URL}/coins`).then(res => res.data);
+  const response = await (await axios.get(`${BASE_URL}/coins`).then(res => res.data));
   return response;
 }
 // coin 화면 api
 export const coinUrl = async(coinId:string) =>{
-  const response = await axios.get(`${BASE_URL}/coins/${coinId}`).then(res => res.data);
+  const response = await (await axios.get(`${BASE_URL}/coins/${coinId}`).then(res => res.data))
   return response;
 }
 export const priceUrl = async(coinId:string) =>{
-  const response = await axios.get(`${BASE_URL}/tickers/${coinId}`).then(res => res.data);
+  const response = await (await axios.get(`${BASE_URL}/tickers/${coinId}`).then(res => res.data))
   return response;
 }
 // 차트 화면
 export const chartCoin =async (coinId:string) => {
-  const response = await axios.get(`${PRICEURL}${coinId}`).then((res) => res.data);
+  const response = await (await axios.get(`${PRICEURL}${coinId}`).then((res) => res.data));
   return response;
 }
