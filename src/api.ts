@@ -6,7 +6,7 @@ const PRICEURL = `https://ohlcv-api.nomadcoders.workers.dev/?coinId=`;
 export const fetchCoins = async() =>{
   // 데이터 얻는법
   // axios.get(url).then(res => console.log(res.data))
-  return await axios.get(`${BaseUrl}/coins`).then(
+  return await axios.get(`https://api.coinpaprika.com/v1/coins`).then(
     (res) =>{
       return (
         res.data
@@ -16,7 +16,7 @@ export const fetchCoins = async() =>{
 }
 // coin 화면 api
 export const coinUrl = async(coinId:string) =>{
-  return await axios.get(`${BaseUrl}/coins/${coinId}`).then(
+  return await axios.get(`https://api.coinpaprika.com/v1/coins/${coinId}`).then(
     (res) =>{
       return (
         res.data
@@ -25,7 +25,7 @@ export const coinUrl = async(coinId:string) =>{
   )
 }
 export const priceUrl = async(coinId:string) =>{
-  return await axios.get(`${BaseUrl}/tickers/${coinId}`).then(
+  return await axios.get(`https://api.coinpaprika.com/v1/tickers/${coinId}`).then(
     (res) =>{
       return (
         res.data
@@ -35,7 +35,7 @@ export const priceUrl = async(coinId:string) =>{
 }
 // 차트 화면
 export const chartCoin =async (coinId:string) => {
-  return await axios.get(`${PRICEURL}${coinId}`).then(
+  return await axios.get(`https://ohlcv-api.nomadcoders.workers.dev/?coinId=${coinId}`).then(
     (res) =>{
       return (
         res.data
