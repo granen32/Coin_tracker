@@ -5,3 +5,4 @@ export const lightTheme: DefaultTheme = {
   textColor: "#fff",
   accentColor: "#44bd32",
 };
+

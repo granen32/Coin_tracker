@@ -20,10 +20,10 @@ const NaviHome = styled.nav`
 export const Navigation = () => {
   const navigate = useNavigate();
   const onclickGohome = () =>{
-    navigate(-1);
+    navigate("/");
   }
   const onclickGoback = () =>{
-    navigate("/");
+    navigate(-1);
   }
   return (
     <NaviHome>
