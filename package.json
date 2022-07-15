@@ -1,5 +1,5 @@
 {
-  "name": "Coin_tracker",
+  "name": "cointracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -51,5 +51,5 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.25"
   },
-  "homepage": "http://granen32.github.io/"
+  "homepage": "http://granen32.github.io/Coin_tracker"
 }
