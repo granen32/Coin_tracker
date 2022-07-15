@@ -18,14 +18,18 @@ export const fetchCoins = async() =>{
 export const coinUrl = async(coinId:string) =>{
   return await axios.get(`${BaseUrl}/coins/${coinId}`).then(
     (res) =>{
-      return res.data;
+      return (
+        res.data
+      )
     }
   )
 }
 export const priceUrl = async(coinId:string) =>{
   return await axios.get(`${BaseUrl}/tickers/${coinId}`).then(
     (res) =>{
-      return res.data;
+      return (
+        res.data
+      )
     }
   )
 }
@@ -33,7 +37,9 @@ export const priceUrl = async(coinId:string) =>{
 export const chartCoin =async (coinId:string) => {
   return await axios.get(`${PRICEURL}${coinId}`).then(
     (res) =>{
-      return res.data;
+      return (
+        res.data
+      )
     }
   )
 }
