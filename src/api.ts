@@ -2,12 +2,17 @@
 import axios from "axios";
 const BASE_URL = "https://api.coinpaprika.com/v1";
 const PRICEURL = `https://ohlcv-api.nomadcoders.workers.dev/?coinId=`;
+
+const instance = axios.create({
+  baseURL: "https://api.coinpaprika.com/v1",
+  timeout:500,
+})
+
 // 이건 함수형으로 해줘야함
 export const fetchCoins = () =>{
   // 데이터 얻는법
   // axios.get(url).then(res => console.log(res.data))
-  const response = axios.get(`${BASE_URL}/coins`).then(res => res.data);
-  return response;
+  return instance.get("/coins").then((res) => res.data);
 }
 // coin 화면 api
 export const coinUrl = (coinId:string) =>{

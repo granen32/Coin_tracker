@@ -5,7 +5,7 @@ import Navigation from './Navigation';
 const Routers = () => {
   return (
     <>
-      <Router basename="/Coin_tracker">
+      <Router basename={process.env.PUBLIC_URL}>
         <Navigation />
         <Routes>
           {/* 기존 스위치 */}
