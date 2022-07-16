@@ -54,7 +54,7 @@ const Img = styled.img`
 
 
 const Coins = () => {
-  const {isLoading,data} = useQuery<CoinInterface[]>("allCoins", fetchCoins);
+  const {isLoading,data} = useQuery<CoinInterface[]>("allCoins", () => fetchCoins());
 
   return (
     <Container>

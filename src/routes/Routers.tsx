@@ -5,7 +5,7 @@ import Navigation from './Navigation';
 const Routers = () => {
   return (
     <>
-      <Router>
+      <Router basename="/Coin_tracker">
         <Navigation />
         <Routes>
           {/* 기존 스위치 */}
