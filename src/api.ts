@@ -1,7 +1,7 @@
 // 이 함수는 json .data를 반환해줘야함 ->fetcher 함수는 promise여야함
 import axios from "axios";
-const BASE_URL = "https://api.coinpaprika.com/v1";
-const PRICEURL = `https://ohlcv-api.nomadcoders.workers.dev/?coinId=`;
+const BASE_URL =`https://api.coinpaprika.com/v1`;
+const PRICEURL =`https://ohlcv-api.nomadcoders.workers.dev/?coinId=`;
 
 const customAxios = axios.create({
   baseURL: ``, // 기본 서버 주소 입력
