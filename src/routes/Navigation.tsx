@@ -17,6 +17,15 @@ const NaviHome = styled.nav`
     text-align: center;
   }
 `;
+const ThemeButton = styled.button`
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #222;
+  margin-bottom:10px;
+  color: #fff;
+  text-align: center;
+`;
 export const Navigation = () => {
   const navigate = useNavigate();
   const onclickGohome = () =>{
@@ -29,6 +38,7 @@ export const Navigation = () => {
     <NaviHome>
       <button name="go" onClick={onclickGohome}>Home</button>
       <button name="back" onClick={onclickGoback}>Back</button>
+      <ThemeButton>Dark Mode</ThemeButton>
     </NaviHome>
   )
 }

@@ -82,3 +82,8 @@ export interface NavigateProps {
   replace?: boolean;
   state?: any;
 } 
+
+// 테마별 
+export interface IrouterProps {
+  toggleDark : () => void;
+}

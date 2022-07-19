@@ -2,10 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Coins from "../pages/Coins";
 import Coin from "../component/Coin";
 import Navigation from './Navigation';
+
 const Routers = () => {
+  // {toggleDark}:IrouterProps
   return (
     <>
       <Router basename={process.env.PUBLIC_URL}>
+        {/* <Navigation toggleDark={toggleDark}/> */}
         <Navigation />
         <Routes>
           {/* 기존 스위치 */}

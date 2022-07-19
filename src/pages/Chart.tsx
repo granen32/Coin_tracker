@@ -27,7 +27,7 @@ const Chart = ({coinId}:coinIdProps) => {
         ]}
         options={{
           theme:{
-            mode: 'dark',
+            mode: "dark",
           },
           stroke: {
             show: true,
