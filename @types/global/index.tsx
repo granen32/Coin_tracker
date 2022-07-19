@@ -84,6 +84,10 @@ export interface NavigateProps {
 } 
 
 // 테마별 
-export interface IrouterProps {
-  toggleDark : () => void;
+// export interface IrouterProps {
+//   toggleDark : () => void;
+// }
+
+export interface DarkAtom {
+  isDarkAtom : boolean;
 }

@@ -6,7 +6,10 @@ import {
 import { useQuery } from 'react-query';
 import { chartCoin } from '../api';
 import APEXChart from "react-apexcharts";
+import { useRecoilValue } from 'recoil';
+import { isDarkAtom } from "../atom"
 const Chart = ({coinId}:coinIdProps) => {
+  const isDark = useRecoilValue(isDarkAtom);
   const {isLoading, data} = useQuery<chartProps[]>(["ohlcv", coinId], () =>chartCoin(coinId),{refetchInterval : 500});
   return (
     <>
@@ -27,7 +30,7 @@ const Chart = ({coinId}:coinIdProps) => {
         ]}
         options={{
           theme:{
-            mode: "dark",
+            mode: isDark ?  "dark" : "light",
           },
           stroke: {
             show: true,

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components";
 import { useNavigate } from 'react-router-dom';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { isDarkAtom } from '../atom';
 const NaviHome = styled.nav`
   display: flex;
   flex-direction: column;
@@ -27,6 +29,9 @@ const ThemeButton = styled.button`
   text-align: center;
 `;
 export const Navigation = () => {
+  const isDark = useRecoilValue(isDarkAtom);
+  const setDarkAtom = useSetRecoilState(isDarkAtom);
+  const toggleDarkAtom = () => setDarkAtom((prev) => !prev)
   const navigate = useNavigate();
   const onclickGohome = () =>{
     navigate("/");
@@ -38,7 +43,7 @@ export const Navigation = () => {
     <NaviHome>
       <button name="go" onClick={onclickGohome}>Home</button>
       <button name="back" onClick={onclickGoback}>Back</button>
-      <ThemeButton>Dark Mode</ThemeButton>
+      <ThemeButton onClick={toggleDarkAtom}>Dark Mode</ThemeButton>
     </NaviHome>
   )
 }
