@@ -26,6 +26,7 @@ const PriceItem = styled.div`
   span{
     display: block;
     margin-bottom: 5px;
+    color: ${(props) => props.theme.cardBgColor};
     &:first-of-type{
       text-transform: uppercase;
       color: tomato;

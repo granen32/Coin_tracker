@@ -51,6 +51,7 @@ const CoinViewItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: ${(props) => props.theme.cardBgColor};
   span:first-of-type{
     font-size: 10px;
     font-weight: 400;
@@ -75,7 +76,7 @@ const Tab = styled.div<{isActive : boolean}>`
   background: rgba(0,0,0, 0.5);
   border-radius: 10px;
   padding: 10px 0;
-  color:${props => props.isActive ? props.theme.accentColor : props.theme.textColor};
+  color:${props => props.isActive ? props.theme.accentColor : props.theme.cardBgColor};
   a{
     display: block;
   }
