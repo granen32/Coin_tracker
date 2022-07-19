@@ -13,7 +13,7 @@ import {
   locationProps, 
   coinData, 
   priceInfoData
-} from "../types" 
+} from "../../@types/global" 
 import styled  from 'styled-components';
 import Price from '../pages/Price';
 import Chart from '../pages/Chart';

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import  axios  from 'axios';
-import { CoinInterface } from "../types" 
+import { CoinInterface } from "../../@types/global" 
 const Container = styled.section`
   padding: 0 10px;
   max-width: 480px;

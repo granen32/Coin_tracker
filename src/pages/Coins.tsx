@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { CoinInterface } from "../types" 
+import { CoinInterface } from "../../@types/global" 
 import { useQuery } from 'react-query';
 import { fetchCoins } from '../api';
 import HelmetTitle from './HelmetTitle';

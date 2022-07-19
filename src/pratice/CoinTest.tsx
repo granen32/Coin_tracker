@@ -16,7 +16,7 @@ import {
   locationProps, 
   coinData, 
   priceInfoData
-} from "../types" 
+} from "../../@types/global" 
 import styled  from 'styled-components';
 import axios  from 'axios';
 import Price from '../pages/Price';

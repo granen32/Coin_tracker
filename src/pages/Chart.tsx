@@ -2,7 +2,7 @@ import React from 'react'
 import {
   coinIdProps, 
   chartProps
-} from "../types" 
+} from "../../@types/global" 
 import { useQuery } from 'react-query';
 import { chartCoin } from '../api';
 import APEXChart from "react-apexcharts";

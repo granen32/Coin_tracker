@@ -2,7 +2,7 @@ import React from 'react'
 import {
   coinIdProps,
   priceInfoData
-} from "../types"; 
+} from "../../@types/global"; 
 import { useQuery } from 'react-query';
 import { priceUrl } from '../api';
 import styled from 'styled-components';
