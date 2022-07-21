@@ -13,7 +13,7 @@ const Container = styled.main`
 `;
 function App() {
   const isDark = useRecoilValue(isDarkAtom);
-  // 리코일의 장ㅓ
+  // 리코일의 장점
   // const [isDark , setIsDark] = useState(false);
   // const toggleDark = () =>{
   //   // value 대신 function 을 보내서 스테이트 값을 변경해줌

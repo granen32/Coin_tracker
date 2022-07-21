@@ -89,5 +89,5 @@ export interface NavigateProps {
 // }
 
 export interface DarkAtom {
-  isDarkAtom : boolean;
+  isDarkAtom? : boolean;
 }
